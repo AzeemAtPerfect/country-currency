@@ -20,7 +20,7 @@ async function getCountryCurrency() {
     const dataCountry = await resCountry.json()
     const resCurrency = await fetch(url1)
     const dataCurrency = await resCurrency.json()
-    console.log(dataCountry.data.length)
+    
     tableDate.innerHTML = `
     <tr>
         <th>Country</th>
