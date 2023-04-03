@@ -50,3 +50,10 @@ th,td {
 th {
     background-color: var(--primary-color);
 }
+
+@media (max-width : 520px) {
+    .search-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
