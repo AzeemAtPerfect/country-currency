@@ -1,7 +1,6 @@
 // QUERY SELECTORS ------------------------------
 
 const searchInput = document.getElementById("search-input")
-const searchBtn = document.querySelector(".search-btn")
 const tableDate = document.querySelector(".table-data")
 const searhOutput = document.querySelector(".search-output")
 
@@ -11,7 +10,9 @@ const url = "https://laravel-world.com/api/countries?"
 const url1 = "https://laravel-world.com/api/currencies?"
 
 // EVENT LISTNERS -----------------------------
-searchBtn.addEventListener("click", searchCurrency)
+
+searchInput.addEventListener("input",searchCurrency)
+
 
 // PROCEDURES ---------------------------------
 
@@ -56,6 +57,7 @@ function searchCurrency() {
             `
         }
     }
+    console.log(searchInput.value)
 }
 
 // CALL FUNCTIONS------------------------------
