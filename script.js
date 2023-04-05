@@ -17,10 +17,12 @@ searchInput.addEventListener("input",searchCurrency)
 // PROCEDURES ---------------------------------
 
 async function getCountryCurrency() {
+    try {
     const resCountry = await fetch(url)
     const dataCountry = await resCountry.json()
     const resCurrency = await fetch(url1)
     const dataCurrency = await resCurrency.json()
+
     
     tableDate.innerHTML = `
     <tr>
@@ -37,6 +39,9 @@ async function getCountryCurrency() {
         </tr>
         `
     }
+} catch (error){
+    alert('Internet Problem Try again')
+}
 }
 
 function searchCurrency() {
